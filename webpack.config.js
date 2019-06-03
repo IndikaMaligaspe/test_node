@@ -5,12 +5,12 @@ module.exports = {
 		filename: "bundle.min.js"
 	},
 	module : {
-		loaders: [
+		rules: [
 		    {
 			exclude: /(node_modules)/,
-			loader: "babel" , 
+			loader: "babel-loader" , 
 			query : {
-			   presets : [ "es2019" , "react" ] 
+			   presets : [ "@babel/preset-env" , "@babel/react" ] 
 			}
 		    }
 		]
